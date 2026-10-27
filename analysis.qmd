@@ -1,0 +1,23 @@
+---
+title: "GitHub Advanced"
+author: Solenia Suarez
+execute:
+  echo: false
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point(alpha = 0.8, size = 2.5) +
+  labs(
+    title = "Bigger engines, lower highway mileage",
+    x = "Engine size (liters)",
+    y = "Highway miles per gallon",
+    color = "Vehicle class"
+  ) +
+  theme_minimal()
+```
